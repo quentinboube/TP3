@@ -4,5 +4,7 @@
 
 int main(){
     afficherMenu();
+    printf ("Votre choix : ");
+    lireChoix();
     return 0;
 }
