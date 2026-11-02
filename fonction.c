@@ -11,3 +11,18 @@ int lireChoix(){
     scanf ("%d", &n);
     return n;
 }
+
+int saisirNombreEleves(){
+    int eleve=0;
+    while (eleve==0 || eleve>30)
+    {
+        printf ("Entrez le nombre d'eleves (1 a 30) : ");
+        scanf("%d",&eleve);
+        if (eleve==0 || eleve>30)
+        {
+            printf("Valeur invalide.\n");
+        }
+        
+    }
+     return eleve;
+}

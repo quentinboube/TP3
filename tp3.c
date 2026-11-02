@@ -5,6 +5,11 @@
 int main(){
     afficherMenu();
     printf ("Votre choix : ");
-    lireChoix();
+    if (lireChoix()==1)
+    {
+        saisirNombreEleves();
+    }
+    
+
     return 0;
 }
