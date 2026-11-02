@@ -14,15 +14,40 @@ int lireChoix(){
 
 int saisirNombreEleves(){
     int eleve=0;
-    while (eleve==0 || eleve>30)
+    while (eleve<=0 || eleve>30)
     {
         printf ("Entrez le nombre d'eleves (1 a 30) : ");
         scanf("%d",&eleve);
-        if (eleve==0 || eleve>30)
+        if (eleve<=0 || eleve>30)
         {
             printf("Valeur invalide.\n");
         }
         
     }
      return eleve;
+}
+
+int saisirNotes(){
+    int eleve = saisirNombreEleves();
+    for (int e=0; e<eleve; e++)
+    {
+        printf("Eleve %d :\n", e+1);
+        int note[3];
+        for (int i = 0; i < 3; i++)
+        {
+            printf ("   Note controle %d (1 a 20) : ",i+1);
+            scanf("%d",&note[i]);
+            while (note[i]>20 || note[i]<=0)
+            {
+                printf ("   Note controle %d (1 a 20) : ",i+1);
+                scanf("%d",&note[i]);
+                if (note[i]>20 || note[i]<=0)
+                {
+                    printf("Valeur invalide.\n");
+                }
+            }
+        }
+    }
+    
+     return 0;
 }

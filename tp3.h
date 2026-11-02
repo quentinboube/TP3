@@ -4,5 +4,7 @@
 void afficherMenu();
 int lireChoix();
 int saisirNombreEleves();
+int saisirNotes();
+
 
 #endif 

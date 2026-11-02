@@ -10,6 +10,10 @@ int main(){
         saisirNombreEleves();
     }
     
+    else if (lireChoix()==2)
+    {
+        saisirNotes();
+    }
 
     return 0;
 }
