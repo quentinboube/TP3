@@ -5,14 +5,24 @@
 int main(){
     afficherMenu();
     printf ("Votre choix : ");
-    if (lireChoix()==1)
+    switch (lireChoix())
     {
+    case 1:
         saisirNombreEleves();
-    }
-    
-    else if (lireChoix()==2)
-    {
+        break;
+
+    case 2:
         saisirNotes();
+        break;
+
+    case 3:
+        afficherNotes();
+        break;
+
+    
+    
+    default:
+        break;
     }
 
     return 0;
