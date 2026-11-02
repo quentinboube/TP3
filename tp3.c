@@ -5,6 +5,7 @@
 int main(){
     afficherMenu();
     printf ("Votre choix : ");
+    int note[3];
     switch (lireChoix())
     {
     case 1:
@@ -12,11 +13,17 @@ int main(){
         break;
 
     case 2:
-        saisirNotes();
+        int eleve = saisirNombreEleves();
+        for (int e=0; e<eleve; e++)
+        {
+            printf("Eleve %d :\n", e+1);
+            saisirNotes(note);
+        }
         break;
 
     case 3:
-        afficherNotes();
+        saisirNotes(note);
+        afficherNotes(note);
         break;
 
     
