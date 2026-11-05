@@ -4,18 +4,17 @@
 
 int main()
 {
-    int choix=2;
     while (1)
     {
-        afficher_menu(choix);
+        afficher_menu();
           
         switch (lireChoix())
         {
         case 1:
-            
+            saisir_montant();
             break;
 
-        case 0:
+        case 2:
             return 0;
         
         default:

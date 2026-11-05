@@ -16,12 +16,15 @@ int lireChoix(){
 }
 
 int saisir_montant(){
-
+    int montant=0;
+    printf("Montant a retirer : ");
+    scanf("%d",&montant);
+    return montant;
 }
 
 
 int montant_valide(int montant){
-
+    
 }
 
 
