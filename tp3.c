@@ -3,34 +3,38 @@
 
 
 int main(){
-    afficherMenu();
-    printf ("Votre choix : ");
-    int note[3];
-    switch (lireChoix())
+    int note[30][3];
+    int eleve =1;
+    while (1)
     {
-    case 1:
-        saisirNombreEleves();
-        break;
-
-    case 2:
-        int eleve = saisirNombreEleves();
-        for (int e=0; e<eleve; e++)
+        afficherMenu();
+        printf ("Votre choix : ");
+        switch (lireChoix())
         {
-            printf("Eleve %d :\n", e+1);
-            saisirNotes(note);
-        }
-        break;
+            case 0:
+                return 0;
 
-    case 3:
-        saisirNotes(note);
-        afficherNotes(note);
-        break;
+            case 1:
+                eleve = saisirNombreEleves();
+                break;
 
+            case 2:
+            
+                saisirNotes(note, eleve);
+                break;
+
+            case 3:
+                afficherNotes(note, eleve);
+                break;
+
+            
+            
+            default:
+                break;
+            }
+    } 
     
     
-    default:
-        break;
-    }
 
     return 0;
 }

@@ -28,29 +28,38 @@ int saisirNombreEleves(){
      return eleve;
 }
 
-int saisirNotes(int note[3]){
-    for (int i = 0; i < 3; i++)
-    {
-        printf ("   Note controle %d (0 a 20) : ",i+1);
-        scanf("%d",&note[i]);
-        while (note[i]>20 || note[i]<0)
+void saisirNotes(int note[30][3], int eleve){
+    for (int e = 0; e<eleve ; e++){
+        printf("Eleve %d :\n", e+1);
+        for (int i = 0; i < 3; i++)
         {
             printf ("   Note controle %d (0 a 20) : ",i+1);
-            scanf("%d",&note[i]);
-            if (note[i]>20 || note[i]<0)
+            scanf("%d",&note[e][i]);
+            while (note[e][i]>20 || note[e][i]<0)
             {
-                printf("Valeur invalide.\n");
+                printf ("   Note controle %d (0 a 20) : ",i+1);
+                scanf("%d",&note[e][i]);
+                if (note[e][i]>20 || note[e][i]<0)
+                {
+                    printf("Valeur invalide.\n");
+                }
             }
         }
     }
     
-     return 0;
+     return;
 }
 
 
-void afficherNotes(int note[3]){
+void afficherNotes(int note[30][3], int eleve){
     printf("Tableau de notes\n");
     printf("Eleve   C1  C2  C3\n");
-    
+    for (int i=0; i<eleve ; i++){
+        int note1,note2, note3;
+        note1= note[i][0];
+        note2= note[i][1];
+        note3= note[i][2];
+        printf("  %d    %d  %d  %d\n", i+1, note1, note2, note3);
+    }
 
 }

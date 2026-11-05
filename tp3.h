@@ -4,8 +4,8 @@
 void afficherMenu();
 int lireChoix();
 int saisirNombreEleves();
-int saisirNotes(int note[3]);
-void afficherNotes(int note[3]);
+void saisirNotes(int note[30][3], int eleve);
+void afficherNotes(int note[30][3], int eleve);
 
 
 #endif 
