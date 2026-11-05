@@ -8,6 +8,8 @@ void saisirNotes(int note[30][3], int eleve);
 void afficherNotes(int note[30][3], int eleve);
 float calculerMoyenneEleve(int note[30][3], int selection);
 float calculerMoyenneGenerale(int note[30][3], int eleve, int selection);
+int trouverMeilleureNoteControle(int eval, int note[30][3], int eleve);
+void afficherMeilleureNoteControle(int note[30][3], int eleve);
 
 
 #endif 

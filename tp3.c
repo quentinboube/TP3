@@ -42,6 +42,12 @@ int main(){
             case 5:
                 moyg = calculerMoyenneGenerale(note, eleve, selection);
                 printf("Moyenne generale de la classe : %.2f\n", moyg);
+                break;
+
+            case 6:
+                afficherMeilleureNoteControle(note, eleve);
+                break;
+                
 
             
             

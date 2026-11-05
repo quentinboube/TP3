@@ -81,3 +81,25 @@ float calculerMoyenneGenerale(int note[30][3], int eleve, int selection){
     }
     return moyg/3;
 }
+
+
+int trouverMeilleureNoteControle(int eval, int note[30][3], int eleve){
+    int plus_grand=0;
+    for (int i = 0; i < eleve; i++)
+    {
+        if (plus_grand<note[i][eval])
+        {
+            plus_grand=note[i][eval];
+        }
+    }
+    return plus_grand;
+}
+
+
+void afficherMeilleureNoteControle(int note[30][3], int eleve){
+    int meilleure = 0;
+    for (int i=0; i<3; i++){
+        meilleure = trouverMeilleureNoteControle(i, note, eleve);
+        printf("Meilleure note au controle %d : %d\n", i+1, meilleure);
+    }
+}
