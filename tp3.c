@@ -5,6 +5,8 @@
 int main(){
     int note[30][3];
     int eleve =1;
+    int selection=0;
+    float moy=0.0f;
     while (1)
     {
         afficherMenu();
@@ -25,6 +27,15 @@ int main(){
 
             case 3:
                 afficherNotes(note, eleve);
+                break;
+
+            case 4:
+                while (selection < 1 || selection > eleve){
+                    printf("Entrez l'indice de l'eleve (1 a %d) : ", eleve);
+                    scanf("%d",&selection);
+                }
+                moy = calculerMoyenneEleve(note, eleve, selection);
+                printf("La moyenne de l'eleve %d : %.2f \n", selection, moy);
                 break;
 
             
