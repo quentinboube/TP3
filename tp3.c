@@ -7,6 +7,7 @@ int main(){
     int eleve =1;
     int selection=0;
     float moy=0.0f;
+    float moyg=0.0f;
     while (1)
     {
         afficherMenu();
@@ -34,9 +35,13 @@ int main(){
                     printf("Entrez l'indice de l'eleve (1 a %d) : ", eleve);
                     scanf("%d",&selection);
                 }
-                moy = calculerMoyenneEleve(note, eleve, selection);
+                moy = calculerMoyenneEleve(note, selection);
                 printf("La moyenne de l'eleve %d : %.2f \n", selection, moy);
                 break;
+
+            case 5:
+                moyg = calculerMoyenneGenerale(note, eleve, selection);
+                printf("Moyenne generale de la classe : %.2f\n", moyg);
 
             
             

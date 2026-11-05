@@ -65,8 +65,19 @@ void afficherNotes(int note[30][3], int eleve){
 }
 
 
-float calculerMoyenneEleve(int note[30][3], int eleve, int selection){
+float calculerMoyenneEleve(int note[30][3], int selection){
     float moy=0.0f;
     moy=(note[selection-1][0]+note[selection-1][1]+note[selection-1][2])/3;
     return moy;
+}
+
+
+float calculerMoyenneGenerale(int note[30][3], int eleve, int selection){
+    float moyg=0.0f;
+    for (int i = 0; i < eleve; i++)
+    {
+        selection++;
+        moyg += calculerMoyenneEleve(note, selection);
+    }
+    return moyg/3;
 }
