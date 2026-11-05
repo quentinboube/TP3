@@ -34,5 +34,32 @@ int montant_valide(int montant){
 
 
 void calcul_distribution(int montant){
-    
+    int cinquante = 0, vingt = 0, dix = 0, cinq = 0;
+    if (montant / 50 != 0) {
+        cinquante = montant / 50;
+        montant = montant % 50;
+    }
+    if (montant / 20 != 0) {
+        vingt = montant / 20;
+        montant = montant % 20; 
+    }
+    if (montant / 10 != 0){
+        dix = montant / 10;
+        montant = montant % 10;
+    }
+    if (montant / 5 != 0) {
+        cinq = montant / 5;
+    }
+    if (cinquante != 0) {
+        printf("%d billets de 50\n", cinquante);
+    }
+    if (vingt != 0) {
+        printf("%d billets de 20\n", vingt);
+    }
+    if (dix != 0) {
+        printf("%d billets de 10\n", dix);
+    }
+    if (cinq != 0) {
+        printf("%d billets de 5\n", cinq);
+    }
 }

@@ -14,7 +14,7 @@ int main()
             montant = saisir_montant();
             if (montant_valide(montant)==0)
             {
-                printf ("C'est bon ;)\n");
+                calcul_distribution(montant);
             }
             
             break;
@@ -23,6 +23,7 @@ int main()
             return 0;
         
         default:
+            printf("Choix invalide");
             break;
         }
     }
